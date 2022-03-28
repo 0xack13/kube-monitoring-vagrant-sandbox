@@ -46,7 +46,7 @@ EOF
 
 install_apt_essential_packages() {
     sudo apt-get update
-    sudo apt-get install -y apt-transport-https ca-certificates curl
+    sudo apt-get install -y apt-transport-https ca-certificates curl ntp
 }
 
 install_docker_containerd_engine() {
@@ -108,7 +108,7 @@ hold_kube_tools() {
 
 
 # Master Utils
-MASTER_IP="192.168.56.10"
+MASTER_IP="10.0.10.10"
 NODENAME=$(hostname -s)
 POD_CIDR="192.160.0.0/16"
 
@@ -249,6 +249,6 @@ k8s_generate_config
 k8s_restart_kubelet
 
 # Worker join
-run_worker_join_script
-copy_kubeconfig_to_worker
-restart_worker_services
+# run_worker_join_script
+# copy_kubeconfig_to_worker
+# restart_worker_services

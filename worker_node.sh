@@ -108,9 +108,9 @@ hold_kube_tools() {
 
 
 # Master Utils
-MASTER_IP="192.168.56.10"
-NODENAME=$(hostname -s)
-POD_CIDR="192.160.0.0/16"
+# MASTER_IP="10.0.10.10"
+# NODENAME=$(hostname -s)
+# POD_CIDR="192.160.0.0/16"
 
 
 kubeadm_images_pull_and_init(){
