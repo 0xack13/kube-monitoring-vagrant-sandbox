@@ -18,6 +18,7 @@ Vagrant.configure("2") do |config|
         vb.cpus = 2
     end
     master.vm.provision "shell", path: "utils.sh"
+    master.vm.provision "shell", path: "patch_etcd.sh"
   end
 
   (1..2).each do |i|
